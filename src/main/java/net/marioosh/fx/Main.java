@@ -12,11 +12,12 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
-			Scene scene = new Scene(root,400,300);
+			Scene scene = new Scene(root);
 			scene.setRoot(root);			
 			scene.getStylesheets().add(getClass().getClassLoader().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Hello");
+			primaryStage.setTitle("Hello JavaFX");
+			primaryStage.setResizable(false);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
